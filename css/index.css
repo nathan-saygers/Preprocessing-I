@@ -141,7 +141,7 @@ body {
 h1 {
   font-size: 3.5rem;
   width: 25%;
-  color: #FAF0E6;
+  color: silver;
   font-family: 'Bangers', cursive;
 }
 h2 {
@@ -150,51 +150,85 @@ h2 {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: flex-end;
   margin-bottom: 2.5%;
   padding: 2.5%;
-  background-image: linear-gradient(to right, salmon, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(#778899, #DCDCDC);
+  height: 40rem;
 }
 header nav {
   display: flex;
   align-items: center;
-  width: 75%;
+  width: 40%;
   justify-content: space-evenly;
-  font-size: 2rem;
+  font-size: 1rem;
+}
+@media (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+    margin: 3% 0;
+  }
 }
 header nav a {
   text-decoration: none;
-  color: #262626;
-}
-.main-content-container {
-  display: flex;
-  align-items: center;
+  color: white;
 }
 @media (max-width: 500px) {
-  .main-content-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .main-content-container .mobile-disappear {
-    display: none;
+  header nav a {
+    margin-top: 3%;
   }
 }
-.main-content-container div {
-  width: 45%;
-  margin: 2%;
+.main-content-container {
+  position: absolute;
+  display: inline-block;
+  left: 10%;
+  top: 15%;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50rem;
+  width: 80%;
 }
-.main-content-container .text-container {
-  padding: 6%;
+.profile-container {
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 40rem;
+  border: black 2px solid;
 }
-.main-content-container p {
-  font-size: 1.25rem;
+.profile-container .nathan-span {
+  font-family: 'Staatliches', cursive;
+  font-size: 5rem;
+  color: #778899;
+}
+.profile-container .saygers-span {
+  font-family: 'Staatliches', cursive;
+  font-size: 5rem;
+}
+.profile-container .description-container p {
+  font-size: 1rem;
+}
+.profile-container .description-container div {
+  font-size: 1.5rem;
+}
+.profile-image-container {
+  border: blue solid 2px;
+}
+.profile-image-container img {
+  height: 40rem;
 }
 .work-history-container {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  color: #262626;
+  margin-top: 30rem;
+  color: white;
   background-image: linear-gradient(to bottom, salmon, white);
 }
 .work-history-container .work-text {
@@ -221,6 +255,11 @@ header nav a {
   width: 45%;
   margin: 2%;
   height: 150px;
+}
+@media (max-width: 500px) {
+  .work-history-container .work-history-boxes-container div {
+    width: 80%;
+  }
 }
 footer {
   display: flex;
